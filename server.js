@@ -11,7 +11,9 @@ const app = express();
 connectDB();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://sunny-pudding-52f0e1.netlify.app'
+}));
 app.use(bodyParser.json());
 
 // Event routes
